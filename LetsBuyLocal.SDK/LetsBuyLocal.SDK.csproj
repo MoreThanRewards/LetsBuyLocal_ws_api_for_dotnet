@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1B707D0F-63E5-4C26-A311-7BCB485DC849}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LetsBuyLocal.SDK</RootNamespace>
+    <AssemblyName>LetsBuyLocal.SDK</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\LetsBuyLocal.SDK.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Alert.cs" />
+    <Compile Include="Models\ArrayOfValues.cs" />
+    <Compile Include="Models\Authentication.cs" />
+    <Compile Include="Models\Authorization.cs" />
+    <Compile Include="Models\BaseEntity.cs" />
+    <Compile Include="Models\DynamicObject.cs" />
+    <Compile Include="Models\Invoice.cs" />
+    <Compile Include="Models\InvoiceItem.cs" />
+    <Compile Include="Models\Pagination.cs" />
+    <Compile Include="Models\UserRewards.cs" />
+    <Compile Include="Models\StringValue.cs" />
+    <Compile Include="Models\DateParameter.cs" />
+    <Compile Include="Models\ErrorMessage.cs" />
+    <Compile Include="Models\Country.cs" />
+    <Compile Include="Models\Deal.cs" />
+    <Compile Include="Models\DealReservation.cs" />
+    <Compile Include="Models\DealRedemption.cs" />
+    <Compile Include="Models\DealUnlock.cs" />
+    <Compile Include="Models\Device.cs" />
+    <Compile Include="Models\Error.cs" />
+    <Compile Include="Models\FBSettings.cs" />
+    <Compile Include="Models\GeoPoint.cs" />
+    <Compile Include="Models\KeyToTheCity.cs" />
+    <Compile Include="Models\Option.cs" />
+    <Compile Include="Models\OptionSets.cs" />
+    <Compile Include="Models\Reservation.cs" />
+    <Compile Include="Models\ResponseMessage.cs" />
+    <Compile Include="Models\Reward.cs" />
+    <Compile Include="Models\RewardsCard.cs" />
+    <Compile Include="Models\State.cs" />
+    <Compile Include="Models\Store.cs" />
+    <Compile Include="Models\StoreApiKey.cs" />
+    <Compile Include="Models\StoreCategory.cs" />
+    <Compile Include="Models\StoreCheckin.cs" />
+    <Compile Include="Models\StoreDealStatus.cs" />
+    <Compile Include="Models\TimeZone.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserAlerts.cs" />
+    <Compile Include="Models\Video.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AlertService.cs" />
+    <Compile Include="Services\AuthenticationService.cs" />
+    <Compile Include="Services\BaseService.cs" />
+    <Compile Include="Services\ConfigurationService.cs" />
+    <Compile Include="Services\DealService.cs" />
+    <Compile Include="Services\DeviceService.cs" />
+    <Compile Include="Services\ErrorService.cs" />
+    <Compile Include="Services\ImageService.cs" />
+    <Compile Include="Services\QrCodeService.cs" />
+    <Compile Include="Services\RewardService.cs" />
+    <Compile Include="Services\StoreService.cs" />
+    <Compile Include="Services\TrainingService.cs" />
+    <Compile Include="Services\UserService.cs" />
+    <Compile Include="Shared\AlertTypes.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Readme.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
